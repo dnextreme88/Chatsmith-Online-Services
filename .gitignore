@@ -1,0 +1,13 @@
+/cos_site/__pycache__/
+/virtualenv/
+/env/
+.venv
+
+.idea/
+
+*.db
+*.pyc
+*.sqlite3
+*.xml
+
+.gitignore
