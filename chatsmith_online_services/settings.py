@@ -25,7 +25,7 @@ SECRET_KEY = 'z7ib*q=0li4tgx4ybkd3=r0hmjuk@#r3zp5)b7*$6^brk^&$5+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'chatsmith_online_services.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+		# If using SQLite3 database
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+		'NAME': 'cos',
+		'USER': 'root',
+		'PASSWORD': 'testpass123',
     }
 }
 
@@ -118,3 +122,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
