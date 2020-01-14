@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Chatsmith Online Services{% endblock %}</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'cos_site/images/cos_favicon.png' %}">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- FONT AWESOME as replacement for GLYPHICONS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{% static 'cos_site/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cos_site/js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'cos_site/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'cos_site/css/main.css' %}">
+
+    <style type="text/css">
+    {% block styles %}
+        html, body {
+            color: black;
+        }
+    {% endblock %}
+    </style>
+
+</head>
+<body>
+
+    {% block header %}
+    <header>
+        <a href="{% url 'site_index' %}"><img id="website-header" class="img-fluid" src="{% static 'cos_site/images/cos_header.jpg' %}" alt="Website logo" title="Go to homepage" /></a>
+        <nav id="header-nav">
+            {% include "cos_site/header_nav.html" %}
+        </nav>
+	</header>
+    {% endblock %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% block footer %}
+    <footer class="footer">
+        <p class="text-left">Chatsmith Online Services &copy; 2020</p>
+    </footer>
+
+    {% endblock %}
+
+
+    {% block customscripts %}
+    <!-- UNUSED -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+
+    {% endblock %}
+
+</body>
+</html>

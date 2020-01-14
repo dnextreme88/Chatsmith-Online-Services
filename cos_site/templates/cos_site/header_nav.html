@@ -1,0 +1,21 @@
+<ul id="header-nav-list" class="list-inline">
+    <li {% if request.path == '/cos/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'site_index' %}">Announcements</a>
+    </li>
+    <li {% if request.path == '/cos/focal/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'focal' %}">Focal</a>
+    </li>
+    <li {% if request.path == '/cos/plateiq/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'plateiq' %}">PlateIQ</a>
+    </li>
+    <li {% if request.path == '/cos/persistiq/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'persistiq' %}">PersistIQ</a>
+    </li>
+    <li {% if request.path == '/cos/smartalto/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'smart_alto' %}">Smart Alto</a>
+    </li>
+    <li {% if request.path == '/cos/knowledgebase/' %} class="list-inline-item active" {% else %} class="list-inline-item" {% endif %}>
+        <a href="{% url 'knowledge_base' %}">Knowledge Base</a>
+    </li>
+
+</ul>
