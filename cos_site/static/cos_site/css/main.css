@@ -1,9 +1,10 @@
-/* HEADER */
-
-img#website-header {
-    height: 480px;
-    width: 100%;
+.page-title {
+    background-color: white;
+    padding: 40px;
+    margin-top: -16px;
 }
+
+/* HEADER */
 
 #header-nav {
     background-color: #1E73BE;
@@ -32,15 +33,31 @@ img#website-header {
 /* FOOTER */
 
 footer {
-    color: white;
-    background-color: #1E73BE;
+    margin-top: 24px;
+    padding: 24px;
+    color: black;
+    background-color: white;
 }
 
 /* END FOOTER */
 
+/* SIDE NAV */
+
+#user-avatar-small {
+    height: 120px;
+    width: 120px;
+}
+
+/* END SIDE NAV */
+
 /* ANCHORS */
 
+a:link {
+    color: #1E73BE;
+}
+
 a:link:hover {
+    color: #7CB7EB;
     text-decoration: none;
 }
 
