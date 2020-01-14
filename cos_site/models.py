@@ -33,7 +33,7 @@ class Employee(AbstractBaseUser, PermissionsMixin):
     date_tenure = models.DateField(auto_now_add=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)
-    avatar = models.ImageField(upload_to='media/employees/', null=True, blank=True)
+    avatar = models.ImageField(upload_to='employees/', null=True, blank=True)
 
     objects = EmployeeUserManager()
 
