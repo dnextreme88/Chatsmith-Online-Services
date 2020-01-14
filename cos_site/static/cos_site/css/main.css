@@ -1,0 +1,266 @@
+/* HEADER */
+
+img#website-header {
+    height: 480px;
+    width: 100%;
+}
+
+#header-nav {
+    background-color: #1E73BE;
+}
+
+    ul#header-nav-list li {
+        height: 40px;
+        margin-top: 16px;
+    }
+
+	ul#header-nav-list li a {
+	    padding: 16px;
+	    color: white;
+	}
+
+	ul#header-nav-list li.active a, ul#header-nav-list li:hover a {
+		background-color: #1B67AB;
+	}
+
+	ul#header-nav-list li.active:hover a {
+		background-color: #1E73BE;
+	}
+
+/* END HEADER */
+
+/* FOOTER */
+
+footer {
+    color: white;
+    background-color: #1E73BE;
+}
+
+/* END FOOTER */
+
+/* ANCHORS */
+
+a:link:hover {
+    text-decoration: none;
+}
+
+/* END ANCHORS */
+
+/* ARROWS */
+	.arrow-up, .arrow-down, .arrow-left, .arrow-right {
+		width: 0;
+		height: 0;
+		margin: 0 auto; /* centers the arrow */
+		transition: all 2s linear;
+		animation-duration: 2s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
+	.arrow-up {
+		border-left: 20px solid transparent; /* make the left not visible */
+		border-right: 20px solid transparent; /* make the right not visible */
+		border-bottom: 20px solid #009688 ; /* forms the triangle */
+		animation-name: animateArrowUp;
+	}
+	.arrow-down {
+		border-left: 20px solid transparent; /* make the left not visible */
+		border-right: 20px solid transparent; /* make the right not visible */
+		border-top: 20px solid #009688 ; /* forms the triangle */
+		animation-name: animateArrowDown;
+	}
+	.arrow-left {
+		border-top: 20px solid transparent; /* make the left not visible */
+		border-bottom: 20px solid transparent; /* make the right not visible */
+		border-right: 20px solid #009688 ; /* forms the triangle */
+		animation-name: animateArrowLeft;
+	}
+	.arrow-right {
+		border-top: 20px solid transparent; /* make the left not visible */
+		border-bottom: 20px solid transparent; /* make the right not visible */
+		border-left: 20px solid #009688 ; /* forms the triangle */
+		animation-name: animateArrowRight;
+	}
+	/* transitions */
+		.arrow-up:hover {
+			border-bottom: 20px solid #4DB6AC;
+		}
+		.arrow-down:hover {
+			border-top: 20px solid #4DB6AC;
+		}
+		.arrow-left:hover {
+			border-right: 20px solid #4DB6AC;
+		}
+		.arrow-right:hover {
+			border-left: 20px solid #4DB6AC;
+		}
+	/* end transitions */
+
+	/* arrow animations */
+		/* up */
+		@-webkit-keyframes animateArrowUp {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(0,5px,0);
+			    transform: translate3d(0,5px,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(0,-5px,0);
+			    transform: translate3d(0,-5px,0);
+			}
+		}
+		@keyframes animateArrowUp {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(0,5px,0);
+			    transform: translate3d(0,5px,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(0,-5px,0);
+			    transform: translate3d(0,-5px,0);
+			}
+		}
+		/* down */
+		@-webkit-keyframes animateArrowDown {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(0,-5px,0);
+			    transform: translate3d(0,-5px,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(0,5px,0);
+			    transform: translate3d(0,5px,0);
+			}
+		}
+		@keyframes animateArrowDown {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(0,-5px,0);
+			    transform: translate3d(0,-5px,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(0,5px,0);
+			    transform: translate3d(0,5px,0);
+			}
+		}
+		/* left */
+		@-webkit-keyframes animateArrowLeft {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(-5px,0,0);
+			    transform: translate3d(-5px,0,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(5px,0,0);
+			    transform: translate3d(5px,0,0);
+			}
+		}
+		@keyframes animateArrowLeft {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(-5px,0,0);
+			    transform: translate3d(-5px,0,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(5px,0,0);
+			    transform: translate3d(5px,0,0);
+			}
+		}
+		/* right */
+		@-webkit-keyframes animateArrowRight {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(5px,0,0);
+			    transform: translate3d(5px,0,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(-5px,0,0);
+			    transform: translate3d(-5px,0,0);
+			}
+		}
+		@keyframes animateArrowRight {
+			0%, 50%, 100% {
+			    -webkit-transform: translateZ(0);
+			    transform: translateZ(0);
+			}
+			25% {
+			    -webkit-transform: translate3d(5px,0,0);
+			    transform: translate3d(5px,0,0);
+			}
+			75% {
+			    -webkit-transform: translate3d(-5px,0,0);
+			    transform: translate3d(-5px,0,0);
+			}
+		}
+	/* end arrow animations */
+/* end arrows */
+
+/* ANIMATIONS */
+
+.slideLeft {
+	position: relative;
+	-webkit-animation: animateleft 0.4s;
+	animation: animateleft 0.4s;
+}
+
+	@-webkit-keyframes animateleft{
+		from {
+			left: -300px;
+			opacity: 0;
+		}
+		to {
+			left: 0;
+			opacity: 1;
+		}
+	}
+
+	@keyframes animateleft{
+		from {
+			left: -300px;
+			opacity: 0;
+		}
+		to {
+			left: 0;
+			opacity: 1;
+		}
+	}
+
+/* end ANIMATIONS */
+
+/* MEDIA RULES - STYLES FOR SPECIFIC BROWSER WINDOW WIDTHS. FOR REFERENCE. */
+/*@media only screen and (min-width : 256px) and (max-width: 400px) {*/
+/*}*/
+
+/*@media only screen and (min-width : 401px) and (max-width: 576px) {*/
+/*}*/
+
+/*@media only screen and (min-width : 577px) and (max-width: 768px) {*/
+/*}*/
+
+/*@media only screen and (min-width : 769px) and (max-width: 992px) {*/
+/*}*/
+
+/*@media only screen and (min-width : 993px) and (max-width: 1200px) {*/
+/*}*/
+
+/* end MEDIA RULES */
