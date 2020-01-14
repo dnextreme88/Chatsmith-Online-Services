@@ -19,6 +19,7 @@
     {% block styles %}
         html, body {
             color: black;
+            background-color: #C1CDDD;
         }
     {% endblock %}
     </style>
@@ -28,7 +29,7 @@
 
     {% block header %}
     <header>
-        <a href="{% url 'site_index' %}"><img id="website-header" class="img-fluid" src="{% static 'cos_site/images/cos_header.jpg' %}" alt="Website logo" title="Go to homepage" /></a>
+        <a href="{% url 'site_index' %}"><img id="website-header" class="img-fluid" src="{% static 'cos_site/images/cos_header2.png' %}" alt="Website logo" title="Go to homepage" /></a>
         <nav id="header-nav">
             {% include "cos_site/header_nav.html" %}
         </nav>
@@ -41,7 +42,7 @@
 
     {% block footer %}
     <footer class="footer">
-        <p class="text-left">Chatsmith Online Services &copy; 2020</p>
+        <p class="text-left">Chatsmith Online Services Copyright &copy; 2020</p>
     </footer>
 
     {% endblock %}
