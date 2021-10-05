@@ -1,0 +1,4 @@
+<h4 class="font-weight-bold">WELCOME</h4>
+<img id="user-avatar-small" src="{{ request.user.avatar.url }}" /> <br /> <br />
+<a href="{% url 'dashboard_profile' %}"><span class="fa fa-user-circle"></span> DASHBOARD / PROFILE &nbsp;</a> <br /> <br />
+<a href="{% url 'logout' %}"><span class="fa fa-power-off"></span> LOG OUT &nbsp;</a>

@@ -1,9 +1,40 @@
 {% extends "cos_site/base.html"  %}
-
+[% load static %}
 {% block content %}
 
-	<section>
-		<p>COS index</p>
-	</section>
+<section class="container-fluid text-muted page-title">
+	<h3>Announcements</h3>
+</section>
+
+<section class="container-fluid">
+	<div class="row">
+		<div id="announcements_pane" class="col-sm-6" style="background-color: orange; margin-left: 20px;">
+			tete
+		</div>
+		<div id="user_right_nav" class="col-sm-4" style="background-color: white; padding: 24px; margin-left: 160px;">
+		{% if request.user.is_authenticated %}
+			{% include "cos_site/user_right_nav.html" %}
+		{% else %}
+			<h4 class="font-weight-bold">Log In</h4><br />
+			<form action="" method="post">
+				{% csrf_token %}
+				<div class="form-group">
+					<label class="font-weight-bold" for="id_username">Username or Email Address</label>
+					<input class="form-control" type="text" id="id_username" name="username">
+				</div>
+				<div class="form-group">
+					<label class="font-weight-bold" for="id_password">Password</label>
+					<input class="form-control" type="password" id="id_password" name="password">
+				</div>
+				<div class="form-check">
+					<input type="checkbox" class="form-check-input" id="checkbox_remember_me">
+					<label class="form-check-label font-weight-bold" for="checkbox_remember_me">Remember Me</label>
+				</div><br />
+					<input class="btn btn-danger" type="submit" name="submit" value="Log In">
+			</form>
+		{% endif %}
+		</div>
+	</div>
+</section>
 
 {% endblock %}
